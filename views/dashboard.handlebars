@@ -1,17 +1,23 @@
 {{#if posts.length}}
 <section>
-  {{!-- <h2>Your Posts</h2> --}}
-  <ol>
+  <ul  class="post-list">
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}"  target="_self" class="edit-link">Edit post</a>
+    <li class="dash-posts">
+      <article id={{post.id}}>
+
+        {{post.title}}  {{format_date post.created_at}}
+      </article>
+
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{/if}}
 
- <a href="/dashboard/new-post"  target="_self" class="edit-link">+ New Post</a>
+<div>
+ <a href="/dashboard/new-post"  target="_self" class="newpost-link">+ New Post</a>
+</div>
+
+<script src="javascript/click-post.js"></script>
 
 

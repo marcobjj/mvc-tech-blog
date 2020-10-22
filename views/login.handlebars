@@ -1,4 +1,7 @@
 <form class="login-form">
+  <article class="post">
+   <div class="post-header bg-brown font-cabbage">Login</div>
+   <div class="post-body">
   <div>
     <label for="email-login">email:</label>
     <input type="text" id="email-login" />
@@ -8,11 +11,20 @@
     <input type="password" id="password-login" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button class="btn-submit" type="submit">login</button>
   </div>
+
+  <div class="signup">Sign up instead</div>
+   </div>
+   </article>
 </form>
 
 <form class="signup-form">
+
+    <article class="post">
+   <div class="post-header bg-brown font-cabbage">Sign up</div>
+   <div class="post-body">
+
   <div>
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
@@ -26,8 +38,11 @@
     <input type="password" id="password-signup" />
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button class="btn-submit" type="submit">signup</button>
   </div>
+    <div class="signup">Login instead</div>
+   </div>
+  </article>
 </form>
 
 <script src="/javascript/login.js"></script>
