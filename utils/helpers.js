@@ -4,19 +4,9 @@ module.exports = {
               date
             ).getFullYear()}`;    
     },
-    format_url: url => {
-        return url
-          .replace('http://', '')
-          .replace('https://', '')
-          .replace('www.', '')
-          .split('/')[0]
-          .split('?')[0];
-      },
-    format_plural: (word, amount) => {
-      if (amount !== 1) {
-        return `${word}s`;
-      }
-  
-      return word;
+    get_title: (url) => {
+      let title = "The Tech Blog";
+      if(url) url.includes("dashboard") ? title = "Your Dashboard" : title = "The Tech Blog";
+      return title
     }
   }

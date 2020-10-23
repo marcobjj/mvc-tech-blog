@@ -16,7 +16,7 @@ async function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         }).then((response) => {
 
-            console.log(response)
+          
 
             // check the response status
             if (response.ok) {
@@ -48,7 +48,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.reload();
         } else {
             alert(response.statusText);
         }

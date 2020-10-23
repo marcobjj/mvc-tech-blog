@@ -3,9 +3,9 @@
   <ul  class="post-list">
     {{#each posts as |post|}}
     <li class="dash-posts">
-      <article id={{post.id}}>
+      <article class="space-between" id={{post.id}}>
 
-        {{post.title}}  {{format_date post.created_at}}
+       <span>{{post.title}}</span>  <span>{{format_date post.created_at}}</span>
       </article>
 
     </li>
@@ -14,7 +14,7 @@
 </section>
 {{/if}}
 
-<div>
+<div class="dashboard-footer large-margin-top">
  <a href="/dashboard/new-post"  target="_self" class="newpost-link">+ New Post</a>
 </div>
 
