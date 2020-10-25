@@ -3,7 +3,7 @@ const { Post, User, Vote, Comment } = require("../../models");
 const withAuth = require('../../utils/auth');
 const sequelize = require('../../config/connection');
 
-// get all users
+//get all posts
 router.get('/', (req, res) => {
     Post.findAll({
         order: [['created_at', 'DESC']],
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
           'created_at'
         ],
         include: [
-          // include the Comment model here:
+          // include the Comment model 
           {
             model: Comment,
             attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
        });
   });
 
-
+// get single post
   router.get('/:id', (req, res) => {
     Post.findOne({
       where: {
@@ -64,8 +64,9 @@ router.get('/', (req, res) => {
       });
   });
 
+  //create new post
+
   router.post('/', (req, res) => {
-    // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
     Post.create({
       title: req.body.title,
       text: req.body.text,
@@ -78,6 +79,7 @@ router.get('/', (req, res) => {
       });
   });
 
+  //update post
   router.put('/:id', (req, res) => {
     Post.update(
       {

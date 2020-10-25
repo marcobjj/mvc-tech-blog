@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Post,Vote } = require('../../models');
 
-// GET /api/users
+// GET all users
 router.get('/', (req, res) => {
     
     // Access our User model and run .findAll() method)
@@ -32,7 +32,7 @@ router.post('/logout', (req, res) => {
 
 
 
-// GET /api/users/1
+// GET single user
 router.get('/:id', (req, res) => {
     User.findOne({ 
         attributes: { exclude: ['password'], include: [
@@ -58,11 +58,11 @@ router.get('/:id', (req, res) => {
       });
   });
 
-// POST /api/users
+// create new user
 router.post('/', (req, res) => {
 
-  console.log("here");
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+
+  
     User.create({
       username: req.body.username,
       email: req.body.email,
@@ -89,7 +89,6 @@ router.post('/', (req, res) => {
 
     // Query operation
 
-    // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
       email: req.body.email
@@ -100,7 +99,7 @@ router.post('/', (req, res) => {
       return;
     }
 
-   // res.json({ user: dbUserData });
+ 
 
     // Verify user
 
@@ -126,7 +125,7 @@ router.post('/', (req, res) => {
   })
   
 
-// PUT /api/users/1
+// update user
 router.put('/:id', (req, res) => {
   
   
@@ -150,7 +149,7 @@ router.put('/:id', (req, res) => {
       });
   });
 
-// DELETE /api/users/1
+// DELETE single user
 router.delete('/:id', (req, res) => {
     User.destroy({
       where: {
