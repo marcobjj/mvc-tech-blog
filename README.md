@@ -13,10 +13,6 @@
  
 * [Usage](#usage)  
  
-* [Contributing](#contributing)  
- 
-* [Tests](#tests)  
- 
 * [Installation](#installation)  
  
 * [Questions](#questions)  
@@ -33,18 +29,8 @@ A multi-author Blog that uses MVC architectural pattern
 ## Usage
 
 
-To comment on existing posts, go to the homepage and click on the post you wish to comment. To create a new post, go to the dashboard and click on "+New Post". To edit or delete a post, go to your dashboard and click on the post that you wish to delete or edit. To register a new account, go to the login page and click "Sign up instead".  
+To comment on existing posts, go to the homepage and click on the post you wish to comment. To create a new post, go to the dashboard and click on "+New Post". To edit or delete a post, go to your dashboard and click on the post that you wish to delete or edit. To register a new account, go to the login page and click "Sign up instead".  The blog is programmed to auto-logout if you stay idle for more than 5 minutes. You can change this timer or remove it completely on public/javascript/auto-logout.js
   
-
-## Contributing
-
-
-nope  
-
-## Tests
-
-
-nope  
 
 ## Installation
 
