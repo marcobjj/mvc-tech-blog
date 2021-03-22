@@ -19,7 +19,7 @@
  
 * [License](#license)  
 
-* [Deployment URL](#deployment url)
+* [Deployment](#deployment)
   
 
 
@@ -65,7 +65,7 @@ Copyright 2020
     limitations under the License.
     
     
-## Deployment URL
+## Deployment
  
  
  [https://guarded-ocean-23470.herokuapp.com/](https://guarded-ocean-23470.herokuapp.com/)
